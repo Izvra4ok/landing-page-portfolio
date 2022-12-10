@@ -1,0 +1,35 @@
+{
+  "name": "landing-page-pulse",
+  "version": "1.0.0",
+  "description": "Course from udemy https://www.udemy.com/share/101Wy23@ErSFnvFTVOwSUFNS0tYLJGYekjWmyxgTfCZL5zqzJWaCqIOUDtBGpyZMv_p_wlqL9g==/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Izvra4ok/landing-page-pulse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Izvra4ok/landing-page-pulse/issues"
+  },
+  "homepage": "https://github.com/Izvra4ok/landing-page-pulse#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.1.0"
+  },
+  "dependencies": {
+    "-": "0.0.1",
+    "g": "^2.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "sass": "^1.56.1"
+  }
+}
