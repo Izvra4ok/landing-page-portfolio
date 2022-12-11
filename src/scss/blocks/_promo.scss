@@ -1,0 +1,55 @@
+@import "src/scss/base/variables";
+@import "src/scss/base/mixins";
+
+.promo {
+  background: url("../../img/main_bg.jpeg") center (center/cover) no-repeat;
+  min-height: 100vh;
+  position: relative;
+  //height: 800px;
+  padding-top: 205px;
+  color: $color-white;
+
+  &__subtitle {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    z-index: 1;
+    @include before-circle;
+  }
+
+  &__title {
+    margin: 9px 0 25px 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  &__btns {
+    display: flex;
+
+    &_link {
+      margin-right: 44px;
+      text-align: center;
+      display: block;
+      width: 135px;
+      height: 45px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 41px;
+      color: $color-white;
+
+      &:hover {
+        @include btn_main_noactive;
+        color: $color-white;
+      }
+
+      &_active {
+        @include btn_main_active;
+        background-color: $btn-bg;
+      }
+    }
+  }
+}
+
+

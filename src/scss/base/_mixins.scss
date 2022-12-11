@@ -1,0 +1,63 @@
+@import "variables";
+
+@mixin btn_main_active {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: $color-white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    background-color: $btn-bg;
+    color: white;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  &:active {
+    background-color: $btn-bg;
+    box-shadow: none;
+  }
+
+  &:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+}
+
+
+@mixin btn_main_noactive {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+@mixin before-circle {
+  &:before {
+    position: absolute;
+    content: "";
+    left: -5px;
+    top: -10px;
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    z-index: -1;
+    background-color: $before-circle;
+  }
+}

@@ -1,8 +1,110 @@
 @import 'libs/bootstrap-reboot.min';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
+//base scss//
+@import "base/variables";
+//base scss//
+
+//blocks scss//
+@import "blocks/promo";
+@import "blocks/menu";
+@import "blocks/elements";
+@import "base/media";
+//blocks scss//
+
+/*Обнуление*/
+
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  @media (max-width: 992px) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  @media (max-width: 576px) {
+    max-width: 540px;
+    margin: 0 auto;
+  }
 }
