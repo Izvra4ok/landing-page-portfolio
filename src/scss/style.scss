@@ -6,9 +6,11 @@
 //base scss//
 
 //blocks scss//
-@import "blocks/promo";
 @import "blocks/menu";
 @import "blocks/elements";
+@import "blocks/promo";
+@import "blocks/about";
+@import "blocks/resume";
 @import "base/media";
 //blocks scss//
 
@@ -95,16 +97,22 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  @media (max-width: 992px) {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  @media (max-width: 768px) {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-  @media (max-width: 576px) {
-    max-width: 540px;
-    margin: 0 auto;
-  }
+  //@media (max-width: 992px) {
+  //  max-width: 960px;
+  //  margin: 0 auto;
+  //}
+  //@media (max-width: 768px) {
+  //  max-width: 720px;
+  //  margin: 0 auto;
+  //}
+  //@media (max-width: 576px) {
+  //  max-width: 540px;
+  //  margin: 0 auto;
+  //}
+}
+.separate {
+  height: 2px;
+  width: 60px;
+  background: $before-circle;
+  margin-top: 4px;
 }

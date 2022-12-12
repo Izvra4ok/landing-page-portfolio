@@ -1,0 +1,98 @@
+@import "src/scss/base/variables";
+@import "src/scss/base/mixins";
+
+.resume {
+  padding: 120px;
+
+  &_subtitle {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 45%;
+      top: -10px;
+      width: 40px;
+      border-radius: 50%;
+      height: 40px;
+      z-index: -1;
+      background-color: $before-circle;
+    }
+  }
+
+  &_title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 60px;
+  }
+}
+
+.separate.resume_separate {
+  display: block;
+  margin: 25px auto 60px auto;
+  //margin-top: 25px;
+}
+
+.grid-resume {
+  padding: 0 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 143px;
+
+  &__options {
+    &_title {
+      padding-left: 35px;
+      position: relative;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      @include before-circe-list;
+    }
+  }
+
+  ul {
+    li {
+      @include connector;
+    }
+  }
+
+  &__item {
+    &_head {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      padding: 45px 0 0 36px;
+    }
+
+    &_image {
+      padding: 15px 0 0 15px;
+      @include before-circle;
+
+      &:before {
+        top: 0;
+      }
+    }
+
+    &_subtitle {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 0;
+    }
+
+    &_location {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &_body {
+      padding-left: 43px;
+      margin-top: 12px;
+    }
+  }
+}

@@ -49,6 +49,7 @@
 }
 
 @mixin before-circle {
+  position: relative;
   &:before {
     position: absolute;
     content: "";
@@ -59,5 +60,34 @@
     height: 40px;
     z-index: -1;
     background-color: $before-circle;
+  }
+}
+
+@mixin before-circe-list {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    left: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $before-circle;
+  }
+}
+
+@mixin connector {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    content: "";
+    width: 1px;
+    height: 110%;
+    background-color: black;
   }
 }
