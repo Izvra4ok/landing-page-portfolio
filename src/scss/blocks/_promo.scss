@@ -2,7 +2,7 @@
 @import "src/scss/base/mixins";
 
 .promo {
-  background: url("../../img/main_bg.jpeg") center (center/cover) no-repeat;
+  background: url("../img/main_bg.jpeg") center (center/cover) no-repeat;
   min-height: 100vh;
   position: relative;
   //height: 800px;
@@ -10,6 +10,7 @@
   color: $color-white;
 
   &__subtitle {
+    letter-spacing: 1.5px;
     position: relative;
     font-size: 16px;
     font-weight: 700;
@@ -19,6 +20,7 @@
   }
 
   &__title {
+    letter-spacing: 1.5px;
     margin: 9px 0 25px 0;
     font-weight: 700;
     font-size: 48px;
