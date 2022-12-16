@@ -15,7 +15,8 @@
 @import "blocks/portfolio";
 @import "blocks/price";
 @import "blocks/contacts";
-@import "base/media";
+@import "blocks/media/media-container";
+@import "blocks/media/media-promo";
 //blocks scss//
 
 /*Обнуление*/
@@ -97,12 +98,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   position: relative;
 }
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
 
 .title_36px {
   font-size: 36px;

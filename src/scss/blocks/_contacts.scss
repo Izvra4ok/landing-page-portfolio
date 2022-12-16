@@ -3,65 +3,6 @@
 
 .contacts {
   padding: 120px 0 50px 0;
-
-  &__form {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 280px);
-    column-gap: 25px;
-    row-gap: 25px;
-    grid-template-rows: 45px 150px 45px;
-
-    label {
-      position: absolute;
-      top: -7px;
-      left: 20px;
-      background-color: $color-white;
-      padding: 0 8px;
-      font-size: 12px;
-      display: block;
-    }
-
-    &_input {
-      position: relative;
-
-      input {
-        display: block;
-        border: 1px solid black;
-        width: 100%;
-        height: 100%;
-        font-size: 12px;
-        font-weight: 500;
-        padding: 0 20px;
-      }
-    }
-
-    &_textarea {
-      position: relative;
-      grid-column: 1/3;
-
-      textarea {
-        resize: none;
-        width: 100%;
-        height: 100%;
-        display: block;
-        border: 1px solid black;
-        font-size: 12px;
-        font-weight: 500;
-        padding: 0 20px;
-      }
-    }
-
-    &_btn {
-      display: block;
-      width: 219px;
-      height: 45px;
-      border: none;
-      background-color: $btn-bg;
-      @include btn_main_active
-
-    }
-  }
 }
 
 .grid-contacts {
@@ -78,8 +19,8 @@
     grid-area: photo;
 
     & img {
+      object-fit: cover;
       width: 100%;
-      max-height: 550px;
       height: 100%;
     }
   }
@@ -116,6 +57,86 @@
       transform: rotate(0deg);
       max-width: 30px;
       max-height: 30px;
+    }
+  }
+}
+
+.contacts {
+
+  &__form {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    column-gap: 25px;
+    row-gap: 25px;
+    grid-template-rows: 45px 150px 45px;
+
+    label {
+      position: absolute;
+      top: -7px;
+      left: 20px;
+      background-color: $color-white;
+      padding: 0 8px;
+      font-size: 12px;
+      display: block;
+      color: black;
+    }
+
+    &_input {
+      position: relative;
+
+      input {
+        display: block;
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 0 20px;
+      }
+    }
+
+    &_textarea {
+      position: relative;
+      grid-column: 1/3;
+
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: 1px solid black;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 20px 20px;
+      }
+    }
+
+    &_btn {
+      display: block;
+      width: 219px;
+      height: 45px;
+      border: none;
+      background-color: $btn-bg;
+      @include btn_main_active
+    }
+
+    &_triggers {
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 35px;
+    }
+
+    &_checkbox {
+      font-size: 12px;
+      line-height: 14px;
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: 10px;
+      }
     }
   }
 }
