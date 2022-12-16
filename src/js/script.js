@@ -8,8 +8,10 @@ document.querySelectorAll('.promo__btns_link').forEach(function (el) {
         this.classList.add("promo__btns_link_active");
     }
 })
+//+ class active//
 
 
+//hamburger menu//
 const hamburger = document.querySelector(".hamburger"),
     menu = document.querySelector(".menu"),
     close = document.querySelector(".menu__nav_close"),
@@ -29,3 +31,14 @@ overlay.addEventListener("click", () => {
     menu.classList.remove("active")
     hamburger.classList.remove("active")
 });
+//hamburger menu//
+
+
+//percent//
+const progress = document.querySelectorAll(".grid-skills__item_percent"),
+    lines = document.querySelectorAll(".grid-skills__item_my");
+
+progress.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+});
+//percent//

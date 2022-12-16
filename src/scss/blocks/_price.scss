@@ -1,0 +1,68 @@
+@import "src/scss/base/variables";
+@import "src/scss/base/mixins";
+
+.price {
+  padding-top: 120px;
+
+  &_subtitle {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 47%;
+      top: -10px;
+      width: 40px;
+      border-radius: 50%;
+      height: 40px;
+      z-index: -1;
+      background-color: $before-circle;
+    }
+  }
+}
+
+.grid-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+
+  &__item {
+    width: 345px;
+    position: relative;
+    margin-left: 75px;
+    margin-bottom: 15px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      left: -25px;
+      top: 0;
+      width: 15px;
+      border-radius: 50%;
+      height: 15px;
+      z-index: -1;
+      background-color: $before-circle;
+    }
+
+    &_description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 700;
+
+      &_name {
+        margin-bottom: 5px;
+      }
+    }
+
+    &_inform {
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+}

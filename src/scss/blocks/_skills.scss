@@ -1,0 +1,107 @@
+@import "src/scss/base/variables";
+@import "src/scss/base/mixins";
+
+.skills {
+  padding-top: 120px;
+
+  &_subtitle {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 47%;
+      top: -10px;
+      width: 40px;
+      border-radius: 50%;
+      height: 40px;
+      z-index: -1;
+      background-color: $before-circle;
+    }
+  }
+
+  &_title {
+    text-align: center;
+  }
+}
+
+.grid-technologies {
+  display: grid;
+  grid-template-columns:repeat(4, 270px);
+  grid-auto-columns: auto;
+  grid-template-rows: repeat(2, minmax(270px, auto));
+  gap: 10px;
+  grid-auto-rows: minmax(270px, auto);
+  padding-bottom: 120px;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    padding-left: 30px;
+    border: 1px solid black;
+
+    &_img {
+      margin-top: 30px;
+    }
+
+    &_title {
+      margin: 15px 0 15px 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &_text {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.grid-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  column-gap: 45px;
+  row-gap: 35px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 45px 38px 0;
+
+    &_name {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 27px;
+      @include before-circle;
+    }
+
+    &_progress {
+      width: 350px;
+      height: 14px;
+      background-color: grey;
+      border-radius: 3%;
+    }
+
+    &_my {
+      border-radius: 4%;
+      height: 100%;
+      background-color: $bg-color;
+    }
+  }
+
+}

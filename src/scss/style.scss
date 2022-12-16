@@ -11,6 +11,10 @@
 @import "blocks/promo";
 @import "blocks/about";
 @import "blocks/resume";
+@import "blocks/skills";
+@import "blocks/portfolio";
+@import "blocks/price";
+@import "blocks/contacts";
 @import "base/media";
 //blocks scss//
 
@@ -97,22 +101,32 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  //@media (max-width: 992px) {
-  //  max-width: 960px;
-  //  margin: 0 auto;
-  //}
-  //@media (max-width: 768px) {
-  //  max-width: 720px;
-  //  margin: 0 auto;
-  //}
-  //@media (max-width: 576px) {
-  //  max-width: 540px;
-  //  margin: 0 auto;
-  //}
 }
+
+
+.title_36px {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-top: 6px;
+}
+
+.subtitle_16px {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .separate {
   height: 2px;
   width: 60px;
   background: $before-circle;
   margin-top: 4px;
+}
+
+.separate_center {
+  height: 2px;
+  width: 60px;
+  background: $before-circle;
+  display: block;
+  margin: 25px auto 60px auto;
 }

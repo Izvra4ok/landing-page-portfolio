@@ -2,13 +2,10 @@
 @import "src/scss/base/mixins";
 
 .resume {
-  padding: 120px;
+  padding-top: 120px;
 
   &_subtitle {
     position: relative;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
     text-align: center;
 
     &:after {
@@ -26,17 +23,9 @@
 
   &_title {
     text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 60px;
   }
 }
 
-.separate.resume_separate {
-  display: block;
-  margin: 25px auto 60px auto;
-  //margin-top: 25px;
-}
 
 .grid-resume {
   padding: 0 65px;
@@ -62,6 +51,18 @@
   }
 
   &__item {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top:65px;
+      left:0;
+      width: 31px;
+      height: 1px;
+      background-color: black;
+    }
+
     &_head {
       display: grid;
       grid-template-columns: 56px 1fr;
