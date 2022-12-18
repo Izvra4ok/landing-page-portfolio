@@ -1,0 +1,144 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+
+@media (max-width: 1200px) {
+  .grid-about {
+    padding: 120px 15px 0 15px;
+    display: grid;
+    grid-template-columns: minmax(390px, 400px) 1fr;
+    grid-template-rows: minmax(245px, auto) minmax(245px, auto);
+    grid-auto-rows: minmax(245px, auto);
+    column-gap: 40px;
+    grid-template-areas:
+        "photo aboutMe"
+        "photo knowledge";
+  }
+}
+
+
+@media (max-width: 992px) {
+  .grid-about {
+    padding: 40px 15px 0 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(245px, auto);
+    row-gap: 10px;
+    grid-template-areas:
+        "aboutMe"
+        "photo"
+        "knowledge";
+
+    &__me {
+      margin-bottom: 10px;
+    }
+
+    &__knowledge {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(90px, auto);
+      grid-auto-rows: minmax(90px, auto);
+      row-gap: 20px;
+      margin-top: 25px;
+
+      &_item {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 40px 500px;
+
+        &_title {
+          text-align: left;
+        }
+
+        &_text {
+          margin: 10px auto 0 auto;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid-about {
+    &__image {
+      grid-area: photo;
+      margin: 0 auto;
+
+      & img {
+        width: 550px;
+        height: 600px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-about {
+    &__knowledge {
+      grid-template-columns: 440px;
+
+      &_item {
+        grid-template-columns: 40px 350px;
+      }
+    }
+
+    &__image {
+      margin: 0 auto;
+
+      & img {
+        width: 440px;
+        height: 550px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .grid-about {
+    padding: 40px 15px 0 15px;
+    display: grid;
+    grid-template-columns: 260px;
+    grid-auto-rows: auto;
+    row-gap: 10px;
+    grid-template-areas:
+        "aboutMe"
+        "photo"
+        "knowledge";
+
+    &__image {
+      margin: 0 auto;
+
+      & img {
+        width: 270px;
+        height: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    &__me {
+      margin-bottom: 10px;
+    }
+
+    &__knowledge {
+      grid-template-columns: 260px;
+      grid-auto-rows: auto;
+      row-gap: 20px;
+      margin-top: 25px;
+
+      &_item {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 40px 200px;
+
+
+        &_text {
+          margin: 10px auto 0 auto;
+        }
+      }
+    }
+  }
+
+}
