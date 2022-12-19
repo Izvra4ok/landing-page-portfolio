@@ -3,26 +3,140 @@
 
 
 @media (max-width: 1200px) {
+  .skills {
+    padding: 120px 15px 0 15px;
+
+    &_subtitle {
+      &:after {
+        left: 47%;
+      }
+    }
+  }
+
+  .grid-technologies {
+    grid-template-columns:repeat(4, 230px);
+    grid-template-rows: repeat(auto-fit, 270px);
+  }
+
+  .grid-skills {
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 35px;
+
+    &__item {
+      &_progress {
+        width: 300px;
+      }
+    }
+  }
 
 }
 
 
 @media (max-width: 992px) {
-  
+  .skills {
+    padding: 60px 15px 0 15px;
+
+    &_subtitle {
+      &:after {
+        left: 46%;
+      }
+    }
+  }
+
+  .grid-technologies {
+    grid-template-columns:repeat(3, 1fr);
+    padding-bottom: 60px;
+  }
+
+  .grid-skills {
+    grid-template-columns: repeat(3, 240px);
+    align-items: end;
+    column-gap: 15px;
+
+    &__item {
+      &_progress {
+        width: 240px;
+      }
+    }
+  }
 }
 
 
 @media (max-width: 768px) {
+  .skills {
+    &_subtitle {
+      &:after {
+        left: 44.5%;
+      }
+    }
+  }
+  .grid-technologies {
+    grid-template-columns:repeat(2, 1fr);
+    padding-bottom: 40px;
+  }
 
+  .grid-skills {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    column-gap: 15px;
+
+    &__item {
+      &_progress {
+        width: 250px;
+      }
+    }
+  }
 }
 
 
 @media (max-width: 576px) {
+  .skills {
+    &_subtitle {
+      &:after {
+        left: 42.5%;
+      }
+    }
+  }
 
+  .grid-technologies {
+    grid-template-columns: repeat(2, 210px);
+    grid-template-rows: repeat(auto-fit, 360px);
+
+    &__item {
+      padding-right: 30px;
+
+      &_img {
+        margin-top: 30px;
+      }
+
+      &_title {
+        margin: 30px 0 15px 0;
+      }
+    }
+  }
+
+  .grid-skills {
+    grid-template-columns: 1fr;
+
+    &__item {
+      &_progress {
+        width: 100%;
+      }
+    }
+  }
 }
 
 
 @media (max-width: 480px) {
-
-
+  .skills {
+    &_subtitle {
+      &:after {
+        left: 40%;
+      }
+    }
+  }
+  .grid-technologies {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 270px);
+  }
 }

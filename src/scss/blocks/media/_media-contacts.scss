@@ -3,17 +3,56 @@
 
 
 @media (max-width: 1200px) {
-
+  .contacts {
+    padding: 120px 15px 50px 15px;
+  }
 }
 
 
 @media (max-width: 992px) {
-  
+  .contacts {
+    padding: 60px 15px 50px 15px;
+
+    &__form {
+      &_triggers {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        button{
+          margin-top:20px;
+          order:2;
+        }
+      }
+    }
+  }
+  .grid-contacts {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+    "contacts"
+    "contacts";
+
+    &__image {
+      display: none;
+    }
+  }
 }
 
 
 @media (max-width: 768px) {
+  .contacts {
+    &__form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      &_input {
+        height: 45px;
+      }
 
+      &_textarea {
+        height: 170px;
+      }
+    }
+  }
 }
 
 

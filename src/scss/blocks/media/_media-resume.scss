@@ -8,21 +8,59 @@
 
 
 @media (max-width: 992px) {
-  
+  .resume {
+    padding-top: 60px;
+
+    &_subtitle {
+      &:after {
+        left: 43.5%;
+      }
+    }
+  }
 }
 
 
 @media (max-width: 768px) {
+  .resume {
+    &_subtitle {
+      &:after {
+        left: 41.5%;
+      }
+    }
+  }
+  .grid-resume {
+    padding: 0 65px;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
 
+  }
 }
 
 
 @media (max-width: 576px) {
-
+  .resume {
+    &_subtitle {
+      &:after {
+        left: 38.5%;
+      }
+    }
+  }
+  .grid-resume {
+    padding: 0 15px;
+  }
 }
 
-
 @media (max-width: 480px) {
+  .resume {
+    &_subtitle {
+      &:after {
+        left: 32%;
+      }
+    }
+  }
 
+  .grid-resume {
+    padding: 0 5px;
 
+  }
 }

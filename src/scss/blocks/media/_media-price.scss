@@ -3,26 +3,67 @@
 
 
 @media (max-width: 1200px) {
+  .price {
+    padding: 120px 15px 0 15px;
+  }
 
-}
 
+  @media (max-width: 992px) {
+    .price {
+      padding-top: 60px;
 
-@media (max-width: 992px) {
-  
+      &_subtitle {
+        &:after {
+          left: 46%;
+        }
+      }
+    }
+    .grid-price {
+      &__item {
+        margin-left: 35px;
+      }
+    }
+  }
 }
 
 
 @media (max-width: 768px) {
-
+  .price {
+    &_subtitle {
+      &:after {
+        left: 44.5%;
+      }
+    }
+  }
+  .grid-price {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
 }
 
 
 @media (max-width: 576px) {
-
+  .price {
+    &_subtitle {
+      &:after {
+        left: 43.5%;
+      }
+    }
+  }
+  .grid-price {
+    &__item {
+      margin-left: 15px;
+    }
+  }
 }
 
-
 @media (max-width: 480px) {
-
+  .price {
+    &_subtitle {
+      &:after {
+        left: 40%;
+      }
+    }
+  }
 
 }
