@@ -117,7 +117,7 @@
             <div class="grid-about">
 
                 <div class="grid-about__image">
-                                        <img src="./img/photo.jpg" alt="photo">
+                    <img src="./img/photo.jpg" alt="photo">
                 </div>
 
                 <div class="grid-about__me">
@@ -589,16 +589,18 @@
 
                     <div class="grid-contacts__me_text">Or leave your details and I will write to you:</div>
 
-                    <form action="##" class="contacts__form">
+                    <form action="##" method="post" class="contacts__form">
 
                         <div class="contacts__form_input">
                             <label for="name">Your name</label>
-                            <input required type="text" name="name" id="name" minlength="2" maxlength="50">
+                            <input class="required" required type="text" name="name" id="name" minlength="2"
+                                   maxlength="50">
                         </div>
 
-                        <div class="contacts__form_input error">
+                        <div class="contacts__form_input">
                             <label for="email">Your email</label>
-                            <input required type="email" name="email" id="email" minlength="2" maxlength="50">
+                            <input class="required" required type="email" name="email" id="email" minlength="2"
+                                   maxlength="50">
                         </div>
 
                         <div class="contacts__form_textarea">
@@ -607,9 +609,9 @@
                         </div>
 
                         <div class="contacts__form_triggers">
-                            <button type="submit" class="contacts__form_btn">Send message</button>
+                            <button id="button" type="submit" class="contacts__form_btn">Send message</button>
                             <div class="contacts__form_checkbox">
-                                <input required type="checkbox" name="checkbox" id="checkbox">
+                                <input class="required" required type="checkbox" name="checkbox" id="checkbox">
                                 <span>Я согласен(а) с <a
                                         href="https://www.court.gov.by/ru/politika/konfidencialjnosti/" target="_blank">политикой
                                     конфедициальности</a></span>

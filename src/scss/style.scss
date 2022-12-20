@@ -74,8 +74,9 @@ input::-ms-clear {
   display: none;
 }
 
-button {
+button,button:active,button:focus,button:visited {
   cursor: pointer;
+  outline: none;
 }
 
 button::-moz-focus-inner {
@@ -108,3 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   position: relative;
 }
+
+//.error {
+//  box-shadow: 1px 1px 3px 1px red;
+//}

@@ -42,3 +42,39 @@ progress.forEach((item, i) => {
     lines[i].style.width = item.innerHTML;
 });
 //percent//
+
+// const required = document.querySelectorAll("input");
+// required.forEach((item) => {
+//
+//     item.addEventListener("input", function (event) {
+//         console.log(item)
+//         if (item.validity.typeMismatch) {
+//             item.setCustomValidity("Some problems")
+//             item.style.boxShadow = "1px 1px 3px 1px red";
+//         } else {
+//             item.setCustomValidity("")
+//             item.style.boxShadow = "none"
+//         }
+//     })
+// })
+
+
+// const email = document.getElementById("email");
+// email.addEventListener("input", function (event) {
+//     if (email.validity.typeMismatch) {
+//         email.setCustomValidity("I am expecting an e-mail address!");
+//         email.style.boxShadow = "1px 1px 3px 1px red"
+//     } else {
+//         email.setCustomValidity("")
+//         email.style.boxShadow = "none"
+//     }
+// });
+
+
+
+const form = document.querySelector('.contacts__form')
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    event.target.reset()
+})
